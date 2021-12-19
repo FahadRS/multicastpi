@@ -1,0 +1,20 @@
+<div>
+  <button (click)="subcribeToService1()">MashupId 1 Subscribe</button>
+  <button (click)="subcribeToService2()">MashupId 2 Subscribe</button>
+  <button (click)="sendService1Time()">MashupId 1 set currentTime</button>
+  <button (click)="sendService2Time()">MashupId 2 set current Time</button>
+</div>
+
+<div>
+  <button (click)="showComponent1 = !showComponent1">Show Component 1</button>
+  <button (click)="showComponent2 = !showComponent2">Show Component 2</button>
+
+ <ng-container *ngIf="showComponent1">
+     <app-component1></app-component1>
+ </ng-container>
+
+ <ng-container *ngIf="showComponent2">
+  <app-component2></app-component2>
+</ng-container>
+
+</div>
